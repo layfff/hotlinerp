@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;;
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    transition: .3s;
+}
+
+a:hover {
+    opacity: 0.6;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+span {
+    color: #ffa500;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffa500;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 20px #ffa500;
+}
+
+/* header */
+
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(255, 255  255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+}
+
+.header__logo {
+    width: 70px;
+    height: 70px;
+}
+
+.header__nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.header__link {
+    color: #fff;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.active {
+    color: orange;
+}
+
+/* welcome */
+
+
+.welcome {
+    transform: translateY(75px);
+    color: #fff;
+    background-image: url("/img/welcome.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+}
+
+.welcome .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome__img {
+    width: 350px;
+    height: 500px;
+    transform: translateY(23px);
+}
+
+.welcome__title {
+    color: #ffa500;
+    font-size: 34px;
+}
+
+.welcome__desc {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* presession */
+
+.presession {
+    margin-top: 100px;
+}
+
+.presession__title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.presession__cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.presession__card {
+    text-align: center;
+    padding: 15px;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ffa500;
+    background-color: #ffa500;
+}
+
+.presession__card-title {
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+
+.fa-solid {
+    font-size: 30px;
+}
+
+/* how-to-play (.play) */
+
+
+.play {
+    margin-top: 400px;
+}
+
+.play .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play__title {
+    font-size: 27px;
+}
+
+.play__how-to-play-card {
+    background-color: #f0f0f0;
+    width: 400px;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.play__card-toutorial {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.toutorial__list-item + .toutorial__list-item {
+    margin-top: 5px;
+}
+
+.play__img1 {
+    width: 300px;
+    position: absolute;
+    transform: translate(-0px, -200px);
+    box-shadow: 0 0 5px #000;
+    border-radius: 4px;
+}
+
+.play__img2 {
+    width: 600px;
+    position: relative;
+    box-shadow: 0 0 15px #000;
+    border-radius: 10px;
+}
+
+.play__img3 {
+    width: 300px;
+    position: absolute;
+    transform: translate(-290px, -200px);
+    box-shadow: 0 0 5px #000;
+    border-radius: 4px;
+}
+
+/* footer */
+
+
+.footer {
+    background-color: #d4d4d4;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__copytight {
+    max-width: 500px;
+}
+
+.footer__title {
+    font-size: 20px;
+}
+
+/* адаптив */
+
+@media (max-width: 1000px) {
+    .play {
+        margin-top: 105px;
+    }
+
+    .play .container {
+        flex-direction: column;
+    }
+
+    .play__how-to-play-card {
+        margin-bottom: 20px;
+    }
+
+    .play__img3 {
+        display: none;
+    }
+
+    .play__img1 {
+        display: none;
+    }
+}
+
+@media (max-width: 680px) {
+    .welcome .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 490px) {
+    .header__logo {
+        display: none;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .play__img2 {
+        display: none;
+    }
+
+    .footer .container {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 370px) {
+    .welcome__img {
+        display: none;
+    }
+
+    .play__how-to-play-card {
+        width: 200px;
+    }
+}
